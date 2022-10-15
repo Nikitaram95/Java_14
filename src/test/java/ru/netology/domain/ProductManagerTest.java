@@ -11,7 +11,6 @@ class ProductManagerTest {
 
     @Test
     void searchByNameBook() {
-
         Product first = new Book(1, "Make", 499, "Lee");
         Product second = new Book(2, "Marple", 390, "Agata");
         Product third = new Smartphone(3, "Iphone", 49900, "Apple");
@@ -22,7 +21,7 @@ class ProductManagerTest {
         manager.add(third);
         manager.add(four);
 
-        Product[] expected = new Product[] {second};
+        Product[] expected = new Product[]{second};
         Product[] actual = manager.searchBy("Agata");
 
         assertArrayEquals(expected, actual);
